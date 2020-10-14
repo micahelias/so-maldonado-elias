@@ -4,3 +4,27 @@ author: "Micah Elias"
 date: "10/14/2020"
 output: html_document
 ---
+libraries
+```{r}
+library(tidyverse)
+#install.packages("sf")
+library(sf)
+```
+mapping inequality
+```{r}
+test <- 123
+
+tmp <- tempfile()
+download.file("https://dsl.richmond.edu/panorama/redlining/static/fullshpfile.zip", tmp)
+unzip(tmp)
+```
+download state data
+```{r}
+tmp <- tempfile()
+download.file("https://data.ca.gov/dataset/e212e397-1277-4df3-8c22-40721b095f33/resource/b0007416-a325-4777-9295-368ea6b710e6/download/ca-county-boundaries.zip", tmp) 
+unzip(tmp)
+```
+read in redlining data
+```{r}
+holc <- st_read("fullshpfile/shapefile/holc_ad_data.shp")
+```
