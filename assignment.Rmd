@@ -1,0 +1,6 @@
+---
+title: "assignment"
+author: "Micah Elias"
+date: "10/14/2020"
+output: html_document
+---
